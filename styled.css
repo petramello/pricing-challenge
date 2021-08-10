@@ -10,9 +10,25 @@ body {
     justify-content: center;
     align-self: center;
     color: #6d6f8d;
+    margin-bottom: 80px;
 }
 
 .switch-plan {
     display: flex;
     flex-flow: row nowrap;
+}
+
+.plans {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
 }
