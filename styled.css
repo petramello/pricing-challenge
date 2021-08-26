@@ -81,7 +81,11 @@ body {
     padding: 15px 30px;
 }
 
-.plan:hover .monthly-price, .annual-price{
+.plan:hover .monthly-price {
+    color: var(--backwhite);
+}
+
+.plan:hover .annual-price {
     color: var(--backwhite);
 }
 
