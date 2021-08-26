@@ -1,3 +1,13 @@
+:root {
+    --ligthgray: #6d6f8d;
+    --darkblue: #090e3e;
+    --darkgray: #16192c;
+    --backwhite: whitesmoke;
+    --lightpurple: #9090fe;
+    --mediumpurple: #757ae1;
+    --darkpurple: #5d66e5;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
@@ -9,13 +19,37 @@ body {
     align-items: center;
     justify-content: center;
     align-self: center;
-    color: #6d6f8d;
-    margin-bottom: 80px;
+    color: var(--ligthgray);
+    margin-bottom: 70px;
 }
 
 .switch-plan {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-switchmode {
+    display: flex;
+    width: 50px;
+    height: 30px;
+    background: linear-gradient(var(--lightpurple), var(--darkpurple));
+    border-radius: 20px;
+    border: none;
+    margin: 0 20px;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.btn-switchmode:nth-child(2)::before {
+    content:"";
+    align-self: center;
+    position: absolute;
+    width:20px;
+    height: 20px;
+    border-radius:20px;
+    background: var(--backwhite);
 }
 
 .plans {
@@ -23,6 +57,8 @@ body {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .plan {
@@ -30,5 +66,81 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    margin: 0;
+    padding: 0 20px;
+    border-radius: 15px;
+    width: 280px;
+    height: 440px;
+    color: var(--ligthgray);
+    background-color: var(--backwhite);
+}
+
+.plan:hover {
+    background: linear-gradient(var(--lightpurple), var(--darkpurple));
+    color: var(--backwhite);
+    padding: 15px 30px;
+}
+
+.plan:hover .monthly-price, .annual-price{
+    color: var(--backwhite);
+}
+
+.plan:hover .btn-learnmore {
+    color: var(--backwhite);
+    background-color: transparent;
+}
+
+.plan:hover .plan-border {
+    border-top: solid 1px var(--backwhite);
+    border-bottom: solid 1px var(--backwhite);
+}
+
+.monthly-price, .annual-price {
+    color: var(--darkgray);
+    font-size: 2em;
+}
+
+.annual-price {
+    display: none;
+}
+
+.switch-price .annual-price {
+    display:flex;
+}
+
+.switch-price .monthly-price {
+    display:none;
+}
+
+.switch-price .btn-switchmode {
+    justify-content: flex-start;
+}
+
+.plan-description {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.plan-border {
+    border-top: solid 1px var(--ligthgray);
+    border-bottom: solid 1px var(--ligthgray);
+}
+
+.btn-learnmore {
+    margin: 40px 0;
+    width: 290px;
+    height: 45px;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--lightpurple);
+    border: solid 2px var(--backwhite);
+    border-radius: 10px;
+}
+
+.btn-learnmore:hover {
+    cursor: pointer;
+    color: var(--backwhite);
 }
